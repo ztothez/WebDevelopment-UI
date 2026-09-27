@@ -1,0 +1,78 @@
+name: Visual review
+  description: Answer six short usability questions about five anonymous dashboard candidates.
+title: "Visual review: "
+body:
+  - type: dropdown
+    id: strongest
+    attributes:
+      label: Which candidate is easiest to read?
+      options: [Candidate A, Candidate B, Candidate C, Candidate D, Candidate E]
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: What made the candidate easy to read?
+      description: Mention what helped you read it, such as contrast, text size, spacing, or clear grouping. One sentence is enough.
+    validations:
+      required: true
+  - type: dropdown
+    id: information-find
+    attributes:
+      label: Which candidate makes the main information easiest to find?
+      options: [Candidate A, Candidate B, Candidate C, Candidate D, Candidate E, No meaningful difference]
+    validations:
+      required: true
+  - type: dropdown
+    id: task-support
+    attributes:
+      label: Which candidate best supports this task?
+      description: Find the most urgent issue and the recommended next action. Use the interactive preview if you prefer.
+      options: [Candidate A, Candidate B, Candidate C, Candidate D, Candidate E, No meaningful difference]
+    validations:
+      required: true
+  - type: textarea
+    id: task-reason
+    attributes:
+      label: What helped you complete that task?
+      description: Mention where you found the issue or next action. One sentence is enough.
+    validations:
+      required: true
+  - type: textarea
+    id: problems
+    attributes:
+      label: What is one problem you noticed?
+      description: Name the candidate and view, then say what it made harder. Example: Candidate C, mobile view, content is too narrow to scan.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Which candidate would you choose for real work, and why?
+      description: Mention the practical reason, not the tool or creator. For example: easier to scan, clearer next action, or less visual clutter.
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How confident are you that you understood the dashboard?
+      options: ["1 - Very unsure", "2", "3 - Neutral", "4", "5 - Very confident"]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional detail for follow-up
+      description: Name an exact candidate and view, describe what you saw, and say what you would change. Example: Candidate C, mobile view, the navigation uses most of the screen and the text becomes too narrow to read.
+  - type: textarea
+    id: viewing-context
+    attributes:
+      label: Optional viewing context
+      description: For example, phone or desktop screen, low vision, color-vision difference, browser zoom, or dark-room viewing.
+  - type: checkboxes
+    id: reviewed
+    attributes:
+      label: Review scope
+      options:
+        - label: I looked through all five candidate sections.
+          required: true
